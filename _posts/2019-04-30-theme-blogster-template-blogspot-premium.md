@@ -25,5 +25,6 @@ demo: 'https://blogster-omtemplates.blogspot.com/'
 * Related Post
 * More Awesome Features
 
-[ How To Setup Blogster Blogger Template](https://youtu.be/hwFS3vBNyjc)
+
 ![](https://i.imgur.com/x1jLRNf.jpg)
+[ How To Setup Blogster Blogger Template](https://youtu.be/hwFS3vBNyjc)
