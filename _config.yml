@@ -1,0 +1,44 @@
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+
+exclude:
+  - "/vendor/"
+
+# Site settings
+title: Moleys
+subtitle: "Destroy all"
+email: moleys@protonmail.com
+author: Ging
+avatar: https://i.imgur.com/GzMbPAW.jpg
+quotes: "Chỉ mới đây thôi..."
+description: 
+  I love Blogspot.
+
+baseurl: "/" 
+url: "https://moleys.github.io" 
+
+# Gitalk
+gitalk:
+  enable: true    #Gitalk
+  clientID: ae0d5746c6f55bef27df
+  clientSecret: c69aa5849c743b867953bf648f9601ab8741dc22
+  repo: moleys.github.io
+  owner: Moleys
+  admin: Moleys
+  distractionFreeMode: true 
+
+# Build settings
+markdown: kramdown
+permalink: /:title
+paginate: 10
+paginate_path: "/page-:num/"
+
+
+# Disqus comments
+# disqus_shortname: XXXX
+
+# Google analytics
+# ga_tracking_id: "UA-XXXX-1"
+
