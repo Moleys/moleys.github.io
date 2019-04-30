@@ -9,12 +9,12 @@ demo: 'https://blogster-omtemplates.blogspot.com/'
 
 # Features
 
-* 100% Pure Responsive - CHECK
-* Google Validation - CHECK
-* Mobile Friendly - CHECK
-* Loading Speed - CHECK
-* Error Page - CHECK
-* Detailed Documentation - CHECK
+* 100% Pure Responsive
+* Google Validation
+* Mobile Friendly
+* Loading Speed
+* Error Page
+* Detailed Documentation
 * Read More With Thumbnail
 * Custom Popular Post Widget
 * Minimal & Clean Design
