@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Theme Easy Cart Blogger Template '
+title: Theme Easy Cart Template Blogspot Premium
 img: 'https://i.imgur.com/fEz8jyX.jpg'
 file: /assets/uploads/easy-cart.zip
 demo: 'https://easy-cart-soratemplates.blogspot.com'
