@@ -22,8 +22,8 @@ url: "https://moleys.github.io"
 # Gitalk
 gitalk:
   enable: true    #Gitalk
-  clientID: ae0d5746c6f55bef27df
-  clientSecret: c69aa5849c743b867953bf648f9601ab8741dc22
+  clientID: d74766f8c5457333c754
+  clientSecret: da69604c1b7314adbed5b098cba440ef7aeaa335
   repo: moleys.github.io
   owner: Moleys
   admin: Moleys
