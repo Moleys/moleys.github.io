@@ -5,7 +5,7 @@ img: 'https://i.imgur.com/x1jLRNf.jpg'
 file: /assets/uploads/blogster.zip
 demo: 'https://blogster-omtemplates.blogspot.com/'
 ---
-**Blogster Blogger Templat**e is simple blog theme for your needs and it works well with all desktop and mobile devices and has ton of built-in features.Blogster is awesomely polished & beautifully balanced pages make it an ideal template for almost all types of blog.! Following are some of the key features of Blogster Blogger Template.
+**Blogster Blogger Template** is simple blog theme for your needs and it works well with all desktop and mobile devices and has ton of built-in features.Blogster is awesomely polished & beautifully balanced pages make it an ideal template for almost all types of blog.! Following are some of the key features of Blogster Blogger Template.
 
 # Features
 
