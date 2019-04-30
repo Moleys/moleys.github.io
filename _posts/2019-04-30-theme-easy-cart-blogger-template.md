@@ -29,4 +29,5 @@ demo: 'https://easy-cart-soratemplates.blogspot.com'
 
 
 ![](https://i.imgur.com/fEz8jyX.jpg)
+
 [How To Setup Easy Cart Blogger Template](https://youtu.be/5GqYyatNctA)
