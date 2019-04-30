@@ -2,7 +2,7 @@
 layout: post
 title: Theme Danshin Template Blogspot Premium
 img: 'https://i.imgur.com/XTDROyO.jpg'
-zip: /assets/uploads/danshin.zip
+file: /assets/uploads/danshin.zip
 demo: 'https://danshin-omtemplates.blogspot.com/'
 ---
 **Danshin Blogger Template** is a very neat, clean and elegant Blogger Blog Theme, perfectly created for those who want to become blogger and want to promote most interesting media through there website. Danshin is awesomely polished & beautifully balanced pages make it an ideal template for almost all types of blog.! Following are some of the key features of Danshin Blogger Template.
