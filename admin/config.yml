@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: Moleys/demolition
+  name: git-gateway
+  repo: Moleys/moleys.github.io
   branch: master 
 
 media_folder: "assets/uploads" # Folder where user uploaded files should go
@@ -16,9 +16,10 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Thumbnail", name: "img", widget: "image", required: false}
+      - {label: "Thumbnail", name: "img", widget: "string", required: false}
+      - {label: "Zip": name: "zip", widget: "file", media_library: config:  multiple: true}
       - {label: "Slug", name: "slug", widget: "string", required: false}
-      - {label: "Categories", name: "categories", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "string", required: false}
+      - {label: "Demo", name: "demo", widget: "string", required: false}
+      - {label: "Download", name: "download", widget: "string", required: false}
     meta: 
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
