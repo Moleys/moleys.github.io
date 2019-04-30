@@ -13,7 +13,7 @@ layout: default
                      </header>
                      <div class="entry-content" itemprop="text">
                         <a class="entry-image-link" href="{{ post.url }}" aria-hidden="true">
-								<img width="150" height="150" src="https://images.weserv.nl/?url={% if post.img %}{{ site.url }}{{ post.img }}{% else %}https://i.imgur.com/RCiUEv6.png{% endif %}&w=150&h=150&t=square&q=90" class="alignleft post-image entry-image" alt="{{ post.title }}" />
+								<img width="150" height="150" src="https://images.weserv.nl/?url={% if post.img %}{{ post.img }}{% else %}https://i.imgur.com/RCiUEv6.png{% endif %}&w=150&h=150&t=square&q=90" class="alignleft post-image entry-image" alt="{{ post.title }}" />
                         </a>
                         <p>{{ post.content | strip_html | truncatewords: 70 }}</p>
                      </div>
