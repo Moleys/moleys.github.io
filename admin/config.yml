@@ -17,9 +17,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Thumbnail", name: "img", widget: "string", required: false}
-      - {label: "Zip", name: "zip", widget: "file", required: false}
+      - {label: "File", name: "file", widget: "file", required: false}
       - {label: "Slug", name: "slug", widget: "string", required: false}
       - {label: "Demo", name: "demo", widget: "string", required: false}
-      - {label: "Download", name: "download", widget: "string", required: false}
     meta: 
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
