@@ -13,8 +13,15 @@ layout: default
                         <div class="entry-content" itemprop="text">
 													{{ content }}
 													
+													<style>.demo_btn_bacsiwindows{color:#7577a9!important;border:2px solid!important;overflow:hidden;position:relative;padding:10px;display:inline-block;width:230px;text-align:center;text-decoration:none!important;text-transform:uppercase;font-size:15px;font-weight:500;margin:10px 5px}.demo_btn_bacsiwindows:after{background:#7577a9;content:"";height:155px;left:-75px;opacity:2;position:absolute;top:-50px;transform:rotate(40deg);transition:.5s;width:100px;z-index:1}.demo_btn_bacsiwindows:hover:after{opacity:1;left:120%;transition:.5s}</style>
+
+													{% if page.demo %}
+													<div style="text-align: center;"><a class="demo_btn_bacsiwindows" href="{{page.demo}}"><i class="fa fa-view"></i> Download</a></div>
+													{% endif %}
 													
-													
+													{% if page.file %}
+													<div style="text-align: center;"><a class="demo_btn_bacsiwindows" href="{{page.file}}"><i class="fa fa-download"></i> Download</a></div>
+													{% endif %}
                         </div>
 
                     </article>
