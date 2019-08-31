@@ -15,7 +15,7 @@ layout: default
 													
 													<ul>
 													{% for episode in page.episodes %}
-														<a href="/{{ episode }}/">{{forloop.index0}} {{ episode }}</a>
+														<a href="/{{ episode }}/">{{forloop.index0 | plus: 1 }} {{ episode }}</a>
 													{% endfor %}
 													
 													
