@@ -5,7 +5,7 @@ img: 'https://i.imgur.com/fEz8jyX.jpg'
 file: /assets/uploads/easy-cart.zip
 slug: theme-easy-cart-blogger-template-premium
 demo: 'https://easy-cart-soratemplates.blogspot.com'
-episodes: love, now, like
+episodes: love now like
 ---
 **Easy Cart Blogger Template** is suitable for any type of Ecommerce or Online Shopping Business. Its the great Ecommerce Business Blogger Template that enables you to create a professional Business website. The overall look and feel of this theme is clean and modern. You don’t have to worry about browser compatibly because our template has been tested across all browsers and works with no shortages in any of the experiences.
 
