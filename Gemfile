@@ -1,4 +1,2 @@
-source 'https://rubygems.org'
-gem "jekyll", ">= 3.6.3"
-gem 'jekyll-sitemap'
-gem 'jekyll-paginate'
+source "https://rubygems.org"
+gem 'github-pages'
