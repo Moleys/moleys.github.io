@@ -60,61 +60,49 @@ layout: default
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.4/showdown.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-xss/0.3.3/xss.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/showdown-xss-filter@0.2.0/showdown-xss-filter.min.js"></script>
-<script>$.getScript('https://www.gstatic.com/firebasejs/3.4.0/firebase.js', function () {
-    var config = {
-			apiKey: "AIzaSyAkxcxsifSvTSZvNxNCNaEsbAyMQl23ytU",
-			authDomain: "xzss-73ea5.firebaseapp.com",
-			databaseURL: "https://xzss-73ea5.firebaseio.com",
-			projectId: "xzss-73ea5",
-			storageBucket: "xzss-73ea5.appspot.com",
-			messagingSenderId: "563790139873",
-			appId: "1:563790139873:web:a963bd36f426b960b542a0"
-    };
-    firebase.initializeApp(config);
-    var rootRef = firebase.database().ref();
-    var postComments = rootRef.child('postComments');
-    var link = $("link[rel='canonical']").attr("href");
-    var pathkey = decodeURI(link.replace(new RegExp('\\/|\\.', 'g'),"_"));
-    var postRef = postComments.child(pathkey);
-    $("#comment").submit(function() {
-        postRef.push().set({
-            name: $("#name").val(),
-            message: $("#message").val(),
-            md5Email: md5($("#email").val()),
-            postedAt: firebase.database.ServerValue.TIMESTAMP
-        });
-        $("input[type=text], textarea").val("");
-        return false;
-    });    
+<script>$(function() {
+  var ref = new Firebase("https://my-development-app.firebaseio.com/"),
+    postRef = ref.child(slugify(window.location.pathname));
+
     postRef.on("child_added", function(snapshot) {
-        var newComment = snapshot.val();
-        var converter = new showdown.Converter({ extensions: ['xssfilter'] });
-        converter.setFlavor('github');
-        var markedMessage = converter.makeHtml(newComment.message);
-        var html = "<div class='comment'>";
-        html += "<h4>" + newComment.name + "</h4>";
-        html += "<div class='profile-image'><img src='https://www.gravatar.com/avatar/" + newComment.md5Email + "?s=100&d=retro'/></div>";
-        html += "<span class='date'>" + jQuery.timeago(newComment.postedAt) + "</span>"
-        html += "<p>" + markedMessage  + "</p></div>";
-        $("#comments-container").prepend(html);
+      var newPost = snapshot.val();
+      $(".comments").prepend('<div class="comment">' +
+        '<h4>' + escapeHtml(newPost.name) + '</h4>' +
+        '<div class="profile-image"><img src="http://www.gravatar.com/avatar/' + escapeHtml(newPost.md5Email) + '?s=100&d=retro"/></div> ' +
+        '<span class="date">' + moment(newPost.postedAt).fromNow() + '</span><p>' + escapeHtml(newPost.message)  + '</p></div>');
     });
-}
-							</script>
-							
-	<div id="comments-container"></div>						
-							
-<script>$("#comment").submit(function() {
-    postRef.push().set({
+
+    $("#comment").submit(function() {
+      var a = postRef.push();
+      
+      a.set({
         name: $("#name").val(),
         message: $("#message").val(),
         md5Email: md5($("#email").val()),
-        postedAt: firebase.database.ServerValue.TIMESTAMP
-  });
+        postedAt: Firebase.ServerValue.TIMESTAMP
+      });
 
-  $("input[type=text], textarea").val("");
-  return false;
+      $("input[type=text], textarea").val("");
+      return false;
+    });
 });
+
+function slugify(text) {
+  return text.toString().toLowerCase().trim()
+    .replace(/&/g, '-and-')
+    .replace(/[\s\W-]+/g, '-')
+    .replace(/[^a-zA-Z0-9-_]+/g,'');
+}
+
+
+function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
 							</script>
+							<div class="comments"></div>
+
 <h3>Leave a comment</h3>
 
 <form id="comment">
@@ -128,7 +116,7 @@ layout: default
   <input type="text" id="email">
 
   <input type="submit" value="Post Comment">
-</form>							
+</form>
 							
         <script type="text/javascript">
             var adlinkfly_url = 'https://rgl.vn/';
