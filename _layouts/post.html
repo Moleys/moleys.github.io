@@ -120,7 +120,7 @@ firebase.database().ref('pageCounts').orderByChild("page").equalTo('{{page.slug}
                     </article>
                     <section class="author-box" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <img src="https://images.weserv.nl/?url={{ site.avatar }}&w=100&h=100&t=square&q=90" class='avatar avatar-70 photo' height='70' width='70' />
-                        <h4 class="author-box-title">Tác giả: <span itemprop="name">{{ site.author }}</span></h4>
+                        <h4 class="author-box-title">Tác giả {{page.slug}}: <span itemprop="name">{{ site.author }}</span></h4>
                         <div class="author-box-content" itemprop="description">
                             <p>"{{ site.quotes }}".</p>
                         </div>
