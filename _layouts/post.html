@@ -10,19 +10,20 @@ layout: default
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>	
 		    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>											
-<script type="text/javascript">
-      // Initialize Firebase
-      var config = {
-    apiKey: "AIzaSyAkxcxsifSvTSZvNxNCNaEsbAyMQl23ytU",
-    authDomain: "xzss-73ea5.firebaseapp.com",
-    databaseURL: "https://xzss-73ea5.firebaseio.com",
-    projectId: "xzss-73ea5",
-    storageBucket: "xzss-73ea5.appspot.com",
-    messagingSenderId: "563790139873",
-    appId: "1:563790139873:web:a963bd36f426b960b542a0"
-      };
-      firebase.initializeApp(config);
-    </script>													
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDws1vKYVBerXg5NQ65JKgDcQkO-pB6leg",
+    authDomain: "bitopma-79566.firebaseapp.com",
+    databaseURL: "https://bitopma-79566.firebaseio.com",
+    projectId: "bitopma-79566",
+    storageBucket: "bitopma-79566.appspot.com",
+    messagingSenderId: "786651734042",
+    appId: "1:786651734042:web:d25ea2755714bc81cbf1a3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>										
 													
 <script type="text/javascript">
 
@@ -37,7 +38,7 @@ layout: default
     let getHistory = new Promise(function (resolve, reject) {
       //Create an object to store copy of the saved db data.
       let obj = {};
-      pageCountsRef.orderByChild("page").equalTo({{page.url}}).once("value", function (snapshot) {
+      pageCountsRef.orderByChild("page").equalTo('{{page.url}}').once("value", function (snapshot) {
         snapshot.forEach(function (child) {
           obj = {
             key: child.key,
@@ -65,7 +66,7 @@ layout: default
       counts = pastcounts + 1;
       //Gather info to post
       var postData = {
-        page: {{page.url}},
+        page: '{{page.url}}',
         count: counts,
       }
 
@@ -91,7 +92,7 @@ layout: default
 <span id="pageviews"></span>
 
 <script type="text/javascript">
-firebase.database().ref('pageCounts').orderByChild("page").equalTo({{page.url}}).on("child_added", function(snapshot) {
+firebase.database().ref('pageCounts').orderByChild("page").equalTo('{{page.url}}').on("child_added", function(snapshot) {
     var newCount = snapshot.val().count;
 
     $("#pageviews").prepend(newCount);
