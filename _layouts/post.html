@@ -38,7 +38,7 @@ layout: default
     let getHistory = new Promise(function (resolve, reject) {
       //Create an object to store copy of the saved db data.
       let obj = {};
-      pageCountsRef.orderByChild("page").equalTo('{{page.url| replace: "/", ""}}').once("value", function (snapshot) {
+      pageCountsRef.orderByChild("page").equalTo('{{page.slug}}').once("value", function (snapshot) {
         snapshot.forEach(function (child) {
           obj = {
             key: child.key,
@@ -66,7 +66,7 @@ layout: default
       counts = pastcounts + 1;
       //Gather info to post
       var postData = {
-        page: '{{page.url| replace: "/", ""}}',
+        page: '{{page.slug}}',
         count: counts,
       }
 
@@ -92,7 +92,7 @@ layout: default
 <span id="pageviews"></span>
 
 <script type="text/javascript">
-firebase.database().ref('pageCounts').orderByChild("page").equalTo('{{page.url| replace: "/", ""}}').on("child_added", function(snapshot) {
+firebase.database().ref('pageCounts').orderByChild("page").equalTo('{{page.slug}}').on("child_added", function(snapshot) {
     var newCount = snapshot.val().count;
 
     $("#pageviews").prepend(newCount);
