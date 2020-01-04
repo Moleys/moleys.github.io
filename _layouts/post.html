@@ -30,16 +30,9 @@ layout: default
 
  <script>
 
-    // You can use the code below as-is.
-    //rootRef is a reference to the whole Firebase database.
     const rootRef = firebase.database().ref();
-    // pageCountRef is just the node that tracks hits
     const pageCountsRef = rootRef.child("pageCounts");
-
-
-    //Gets the key and current hit count for the page (if it exists)
     let getHistory = new Promise(function (resolve, reject) {
-      //Create an object to store copy of the saved db data.
       let obj = {};
       pageCountsRef.orderByChild("page").equalTo('{{page.slug}}').once("value", function (snapshot) {
         snapshot.forEach(function (child) {
@@ -55,19 +48,14 @@ layout: default
         }
       });
     });
-    //When getHistory promise resoves, the key is either undefined (page not in the database),
-    //Or key is a string that uniquely identifies the page in the database.
     getHistory.then(function (fromResolve) {
       var key = fromResolve.key;
       var pastcounts = fromResolve.count;
-      //If key is undefined, create a new key for this database item.
       if (key == undefined) {
         key = pageCountsRef.push().key;
         pastcounts = 0;
       }
-      //Total hits to date.
       counts = pastcounts + 1;
-      //Gather info to post
       var postData = {
         page: '{{page.slug}}',
         count: counts,
