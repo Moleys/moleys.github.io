@@ -42,3 +42,7 @@ paginate_path: "/page-:num/"
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
 
+
+comment-read: https://docs.google.com/spreadsheets/d/1vYiR1EGI8OTHDgp3IZ8WrTbf_hnA7Mni-sKQXRm7R_A
+comment-post: https://docs.google.com/forms/d/e/1FAIpQLSe10zSievDubX7L8Lkp39eb6dLxFxRbmb7HBqrk8kJD_oXH9Q
+comment-post-fields: [ entry.404787257, entry.2003036143, entry.432128806]
