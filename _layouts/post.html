@@ -121,7 +121,7 @@ firebase.database().ref('pageCounts').orderByChild("page").equalTo('{{page.slug}
 									
 
 
-							
+							{% include comment-section.html url=page.url %}
 
 							
 		<!-- Gitalk start  -->
