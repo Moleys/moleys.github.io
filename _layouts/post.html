@@ -125,7 +125,7 @@ firebase.database().ref('pageCounts').orderByChild("page").equalTo('{{page.slug}
 
 							
 		<!-- Gitalk start  -->
-                {% if site.gitalk.enable %}
+                {% if site.gitalk.disable %}
                 <!-- Gitalk link  -->
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 				<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
