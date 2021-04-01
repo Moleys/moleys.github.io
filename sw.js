@@ -2,10 +2,11 @@ const staticCacheName = 'site-static-v1';
 const assets = [
   '/',
   '/index.html',
-  '/assets/js/ui.js',
+  '/assets/js/lunr.min.js',
+  '/assets/js/search.js',
   '/assets/css/main.css',
-  '/assets/images/background-home.jpg',
-  'https://fonts.googleapis.com/css?family=Lato:300,400,700',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+  'https://cdn.jsdelivr.net/npm/darkmode-js@1.3.4/lib/darkmode-js.min.js',
 ];
 // install event
 self.addEventListener('install', evt => {
